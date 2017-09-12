@@ -1,0 +1,6 @@
+<p *ngIf="!loading">
+    {{message.what + ' ' + message.who}}
+  </p>
+  <p *ngIf="loading">
+    retrieving message...
+  </p>
