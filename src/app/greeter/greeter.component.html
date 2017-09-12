@@ -1,4 +1,4 @@
-<button type="button" (click)="greet()">Greet!</button>
-<p>
-  {{message}}
-</p>
+<button type="button" [disabled]="loading" (click)="greet()">Greet!</button>
+<button type="button" [disabled]="loading" (click)="magic()">Magic!</button>
+
+<app-message [message]="message" [loading]="loading"></app-message>

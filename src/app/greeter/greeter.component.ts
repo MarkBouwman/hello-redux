@@ -1,21 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+import { IGreeterMessage } from '../store/hello-redux-reducer';
 
 @Component({
   selector: 'app-greeter',
   templateUrl: './greeter.component.html',
-  styleUrls: ['./greeter.component.css']
+  styleUrls: ['./greeter.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GreeterComponent implements OnInit {
+export class GreeterComponent {
 
-  public message: string;
+  @Input() public loading: boolean;
+  @Input() public message: IGreeterMessage;
+  @Output() public onGreet: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
 
-  ngOnInit() {
-    this.message = 'hello world';
+  greet() {
+    this.onGreet.emit();
   }
 
-  greet() {
-    this.message = 'hello redux';
+  magic() {
+    this.message.who = 'Dexter';
   }
 }
