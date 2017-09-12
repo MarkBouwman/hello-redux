@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IGreeterMessage } from '../store/hello-redux-reducer';
 
 @Component({
   selector: 'app-greeter',
@@ -8,11 +9,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class GreeterComponent {
 
   @Input() public message: string;
-  @Output() public onGreet: EventEmitter<string> = new EventEmitter<string>();
+  @Output() public onGreet: EventEmitter<IGreeterMessage> = new EventEmitter<IGreeterMessage>();
 
   constructor() { }
 
   greet() {
-    this.onGreet.emit('hello redux');
+    this.onGreet.emit({ what: 'hello', who: 'redux' } );
   }
 }

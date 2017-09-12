@@ -1,11 +1,16 @@
 import * as helloReduxActions from './hello-redux-actions';
 
 export interface IState {
-  message: string;
+  message: IGreeterMessage;
+}
+
+export interface IGreeterMessage {
+  what: string;
+  who: string;
 }
 
 const initSate: IState = {
-  message: 'hello world'
+  message: { what: 'hello', who: 'world' }
 }
 
 export function reducer(state: IState = initSate, action: helloReduxActions.All): IState {
