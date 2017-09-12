@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/rx';
 
 import * as reducer from './reducers';
 import * as actions from './store/hello-redux-actions';
-import { IGreeterMessage } from './store/hello-redux-reducer';
+import { IGreeterMessage } from './models/IGreeterService';
 
 @Component({
   selector: 'app-root',

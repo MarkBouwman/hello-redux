@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import * as state from './hello-redux-reducer';
+import { IGreeterMessage } from '../models/IGreeterService';
 
 export const GREET = 'Greet';
 export const GREET_SUCCESS = 'Greet Success';
@@ -10,7 +10,7 @@ export class Greet implements Action {
 
 export class GreetSuccess implements Action {
   readonly type = GREET_SUCCESS;
-  constructor(public payload: state.IGreeterMessage) { }
+  constructor(public payload: IGreeterMessage) { }
 }
 
 export type All = Greet | GreetSuccess
