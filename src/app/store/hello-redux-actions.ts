@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { IGreeterMessage } from './hello-redux-reducer';
+import { IGreeterMessage } from '../models/IGreeterMessage';
 
 export const GREET = 'Greet';
 

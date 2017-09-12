@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { IGreeterMessage } from '../store/hello-redux-reducer';
+import { IGreeterMessage } from '../models/IGreeterMessage';
 
 @Component({
   selector: 'app-greeter',

@@ -1,12 +1,8 @@
 import * as helloReduxActions from './hello-redux-actions';
+import { IGreeterMessage } from '../models/IGreeterMessage';
 
 export interface IState {
   message: IGreeterMessage;
-}
-
-export interface IGreeterMessage {
-  what: string;
-  who: string;
 }
 
 const initSate: IState = {
