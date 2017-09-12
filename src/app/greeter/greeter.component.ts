@@ -1,21 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-greeter',
   templateUrl: './greeter.component.html',
   styleUrls: ['./greeter.component.css']
 })
-export class GreeterComponent implements OnInit {
+export class GreeterComponent {
 
-  public message: string;
+  @Input() public message: string;
+  @Output() public onGreet: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
-  ngOnInit() {
-    this.message = 'hello world';
-  }
-
   greet() {
-    this.message = 'hello redux';
+    this.onGreet.emit('hello redux');
   }
 }

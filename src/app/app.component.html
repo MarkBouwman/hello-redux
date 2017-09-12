@@ -1,4 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center; font-size: 46px">
-  <app-greeter></app-greeter>
+  <app-greeter [message]="message$ | async" (onGreet)="onGreet($event)"></app-greeter>
 </div>
