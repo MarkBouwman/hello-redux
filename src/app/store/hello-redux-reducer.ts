@@ -1,5 +1,5 @@
 import * as helloReduxActions from './hello-redux-actions';
-import { IGreeterMessage } from '../models/IGreeterService';
+import { IGreeterMessage } from '../models/IGreeterMessage';
 
 export interface IState {
   message: IGreeterMessage;
