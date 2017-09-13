@@ -1,11 +1,10 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
-import { IGreeterMessage } from '../store/hello-redux-reducer';
+import { IGreeterMessage } from '../models/IGreeterMessage';
 
 @Component({
   selector: 'app-message',
   templateUrl: './message.component.html',
-  styleUrls: ['./message.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements OnInit {
 

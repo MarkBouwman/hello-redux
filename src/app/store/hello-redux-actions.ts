@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { IGreeterMessage } from '../models/IGreeterService';
+import { IGreeterMessage } from '../models/IGreeterMessage';
 
 export const GREET = 'Greet';
 export const GREET_SUCCESS = 'Greet Success';

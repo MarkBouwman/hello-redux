@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
-import { IGreeterMessage } from '../models/IGreeterService';
+import { IGreeterMessage } from '../models/IGreeterMessage';
 
 @Component({
   selector: 'app-greeter',
