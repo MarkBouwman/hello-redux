@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { IGreeterMessage } from '../models/IGreeterMessage';
 @Component({
   selector: 'app-greeter',
   templateUrl: './greeter.component.html',
@@ -7,15 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GreeterComponent implements OnInit {
 
-  public message: string;
+  @Output() public onGreet: EventEmitter<IGreeterMessage> = new EventEmitter<IGreeterMessage>();
 
   constructor() { }
 
-  ngOnInit() {
-    this.message = 'hello world';
-  }
+  ngOnInit() { }
 
   greet() {
-    this.message = 'hello redux';
+    this.onGreet.emit({ what: 'hello', who: 'not redux'});
   }
 }

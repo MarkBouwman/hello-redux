@@ -1,4 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center; font-size: 46px">
-  <app-greeter></app-greeter>
+  <app-greeter (onGreet)="greet($event)"></app-greeter>
+  <app-message [message]="message"></app-message>
 </div>
